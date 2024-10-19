@@ -132,7 +132,7 @@ def build_super_images(real_imgs, captions, ixtoword,
                 one_map = \
                     skimage.transform.pyramid_expand(one_map, sigma=20,
                                                      upscale=vis_size // att_sze,
-                                                     multichannel=True)
+                                                     )
             row_beforeNorm.append(one_map)
             minV = one_map.min()
             maxV = one_map.max()
@@ -233,7 +233,7 @@ def build_super_images2(real_imgs, captions, cap_lens, ixtoword,
                 one_map = \
                     skimage.transform.pyramid_expand(one_map, sigma=20,
                                                      upscale=vis_size // att_sze,
-                                                     multichannel=True)
+                                                     )
             minV = one_map.min()
             maxV = one_map.max()
             one_map = (one_map - minV) / (maxV - minV)

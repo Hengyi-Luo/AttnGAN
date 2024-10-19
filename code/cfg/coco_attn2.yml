@@ -1,8 +1,8 @@
 CONFIG_NAME: 'glu-gan2'
 
 DATASET_NAME: 'coco'
-DATA_DIR: '../data/coco'
-GPU_ID: 0
+DATA_DIR: '/srv/local/shared/AttnGAN/coco/'
+GPU_ID: 1
 WORKERS: 4
 
 
@@ -14,7 +14,7 @@ TRAIN:
     FLAG: True
     NET_G: ''  # '../models/coco_AttnGAN2.pth'
     B_NET_D: True
-    BATCH_SIZE: 14  # 32
+    BATCH_SIZE: 32  # 32
     MAX_EPOCH: 120
     SNAPSHOT_INTERVAL: 5
     DISCRIMINATOR_LR: 0.0002
